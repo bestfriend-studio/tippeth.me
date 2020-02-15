@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Flex, Button, Slider, Image, Box, Text, Heading } from "rimble-ui";
+import { Flex, Button, Slider, Image, Box, Text } from "rimble-ui";
 import styled from "styled-components";
 import "./App.css";
 
@@ -22,7 +22,6 @@ function App() {
 
   return (
     <Box className="App">
-      <Heading color={"primary"}>ethance.it</Heading>
       <BlurImage
         alt="random unsplash image"
         borderRadius={8}
@@ -31,10 +30,8 @@ function App() {
         src="https://source.unsplash.com/random/1280x720"
       />
       <Box>
-        <Flex alignItems={"center"} p={3} bg={"white"}>
-          <Text color={"primary"} mr={2}>
-            $.01
-          </Text>
+        <Flex>
+          <Text>$.01</Text>
           <Slider
             min={".01"}
             max={"10"}
@@ -42,9 +39,7 @@ function App() {
             value={amount}
             onChange={handleSlider}
           />
-          <Text color={"primary"} ml={2}>
-            $10
-          </Text>
+          <Text>$10</Text>
         </Flex>
 
         <Button.Outline onClick={submitTip}>tip ${amount}</Button.Outline>
